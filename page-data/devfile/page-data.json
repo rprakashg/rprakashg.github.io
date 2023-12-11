@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-post-js",
+    "path": "/devfile/",
+    "result": {"data":{"site":{"siteMetadata":{"url":"https://rprakashg.github.io","title":"rprakashg.github.io"}},"markdownRemark":{"html":"","frontmatter":{"title":"Leveraging DevFiles and DevFile Registry to improve developer productivity for OpenShift developers","date":"August 12, 2022","tags":["OpenShift","Platform","Kubernetes","Digital","DevFile","Productivity"],"author":"Ram Gopinathan"}}},"pageContext":{"slug":"/devfile/"}},
+    "staticQueryHashes": ["1611934721","2366241629"]}

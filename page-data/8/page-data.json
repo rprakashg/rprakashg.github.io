@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-post-list-js",
+    "path": "/8",
+    "result": {"data":{"site":{"siteMetadata":{"title":"rprakashg.github.io","author":"RAM GOPINATHAN"}},"allMarkdownRemark":{"totalCount":19,"edges":[]}},"pageContext":{"limit":3,"skip":21,"numPages":8,"currentPage":8}},
+    "staticQueryHashes": ["1611934721","2366241629"]}
