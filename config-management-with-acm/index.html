@@ -13,8 +13,8 @@
 <p>In this post I will cover how you can implement a solution using Red Hat Advanced Cluster Management for Kubernetes, ArgoCD, GitOps and Kustomize to deploy common configurations as policies to Kubernetes clusters running workloads. Source files referenced in this blog post can be found <a href="https://github.com/rprakashg-redhat/rhacm-demos/tree/main/governance">here</a></p>
 <p>The governance feature in Red Hat Advanced Cluster Management for Kubernetes allows you to define/externalize common configurations as policies and provides a framework to propagate and enforce those policies to clusters and visualize the results from a single pane of glass view. If you are new to Red Hat Advanced Cluster management for Kubernetes I recommend checking <a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.9/html/governance/governance#governance-architecture">this</a> documentation to get familiar specifically with the governance feature also to clarify further by common configurations I'm referring to internal standards that must be met for software engineering, resiliency, security, and regulatory compliance for workloads hosted on-premises, multi-cloud, and edge.</p>
 <p>In addition to the tools mentioned earlier we are also going to leverage a Kustomize plugin called PolicyGenerator. For more info on the plugin head over to <a href="https://github.com/open-cluster-management-io/policy-generator-plugin">this</a> github repository. This plugin allows us to dynamically generate policy resources based on a manifest file.</p>
-<p>For the purposes of this article I have provisioned two clusters in AWS. You can see this in the screen shot of clusters section of advanced cluster management for kubernetes (ACM) hub cluster
-<span
+<p>For the purposes of this article I have provisioned two clusters in AWS. You can see this in the screen shot of clusters section of advanced cluster management for kubernetes (ACM) hub cluster</p>
+<p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
     >
@@ -44,11 +44,11 @@
         decoding="async"
       />
   </a>
-    </span>
-First cluster is the management cluster cluster running Red Hat Advanced Cluster Management for Kubernetes. Second cluster "ocp-dev" is provisioned in AWS east region and is meant to be used for running workloads.</p>
+    </span></p>
+<p>First cluster is the management cluster cluster running Red Hat Advanced Cluster Management for Kubernetes. Second cluster "ocp-dev" is provisioned in AWS east region and is meant to be used for running workloads.</p>
 <p>For demonstration purposes we are going to use a gatekeeper policy to deny container latest tag in DaemonSet, Deployment as well as StatefulSet and two RHACM policies, one to install and configure Red Hat supported version of Gatekeeper and the other to install and configure Crunchy Postgresql database. All the policies are grouped into policysets namely acm-policyset and gatekeeper-policyset to better organize the policies. Since in this demo we only have 3 policies we didn't really need to use policysets but in real world you might have lots of policies and hopefully this helps as a reference,</p>
-<p>Lets examine the Policy Generator manifests for both ACM and gatekeeper policysets. Screen capture below shows the manifest file for ACM policies used in this demo
-<span
+<p>Lets examine the Policy Generator manifests for both ACM and gatekeeper policysets. Screen capture below shows the manifest file for ACM policies used in this demo</p>
+<p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
     >
@@ -78,10 +78,10 @@ First cluster is the management cluster cluster running Red Hat Advanced Cluster
         decoding="async"
       />
   </a>
-    </span>
-You can see the section for default settings for all policies included in the set as well as two policies for installing gatekeeper and postgresql operator.</p>
-<p>Screen capture below shows the manifest file for gatekeeper policies used in this demo
-<span
+    </span></p>
+<p>You can see the section for default settings for all policies included in the set as well as two policies for installing gatekeeper and postgresql operator.</p>
+<p>Screen capture below shows the manifest file for gatekeeper policies used in this demo</p>
+<p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
     >
@@ -112,8 +112,8 @@ You can see the section for default settings for all policies included in the se
       />
   </a>
     </span></p>
-<p>In the Kustomization file we are going to reference both manifest files under generators section as shown below
-<span
+<p>In the Kustomization file we are going to reference both manifest files under generators section as shown below</p>
+<p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 659px; "
     >
@@ -144,8 +144,8 @@ You can see the section for default settings for all policies included in the se
   </a>
     </span></p>
 <p>Next thing we need to do is to use the Application life cycle management feature of Red Hat Advanced Cluster Management for Kubernetes to run kustomize and dynamically generate policy resources and deploy them to hub cluster. We are using ArgoCD and GitOps so when changes are made in git repo ACM can automatically sync those changes to hub cluster. Once the policy resources are created in hub cluster, ACM will propagate them to target cluster based on the placement rule.</p>
-<p>In the ArgoCD application resource shown in screen capture below you can see that under source I'm referencing the github repo as well as path where policy manifests are defined and the target revision to use. I'm also specifying under destination namespace where I want the policy resources to be created.
-<span
+<p>In the ArgoCD application resource shown in screen capture below you can see that under source I'm referencing the github repo as well as path where policy manifests are defined and the target revision to use. I'm also specifying under destination namespace where I want the policy resources to be created.</p>
+<p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 711px; "
     >
