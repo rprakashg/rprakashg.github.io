@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/ipersonate/",
-    "result": {"data":{"site":{"siteMetadata":{"url":"https://rprakashg.github.io","title":"rprakashg.github.io"}},"markdownRemark":{"html":"<p>In this post I'm going to cover how you can impersonate another user on OpenShift container platform. Before I get into it I just want to talk about why you might want to leverage this capability</p>","frontmatter":{"title":"Impersonating a user in OpenShift","date":"October 26, 2022","tags":["OpenShift","Platform","Kubernetes"],"author":"Ram Gopinathan"}}},"pageContext":{"slug":"/ipersonate/"}},
-    "staticQueryHashes": ["1611934721","2366241629"]}
