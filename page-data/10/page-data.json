@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-post-list-js",
     "path": "/10",
-    "result": {"data":{"site":{"siteMetadata":{"title":"rprakashg.github.io","author":"RAM GOPINATHAN"}},"allMarkdownRemark":{"totalCount":25,"edges":[]}},"pageContext":{"limit":3,"skip":27,"numPages":10,"currentPage":10}},
+    "result": {"data":{"site":{"siteMetadata":{"title":"rprakashg.github.io","author":"RAM GOPINATHAN"}},"allMarkdownRemark":{"totalCount":26,"edges":[]}},"pageContext":{"limit":3,"skip":27,"numPages":10,"currentPage":10}},
     "staticQueryHashes": ["1611934721","2366241629"]}
