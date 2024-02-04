@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-templates-tag-js",
-    "path": "/tags/productivity/",
-    "result": {"data":{"site":{"siteMetadata":{"title":"rprakashg.github.io","author":"RAM GOPINATHAN"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"excerpt":"","html":"","id":"c3dc4a22-fb52-5f6b-b719-a6c23a8269c3","frontmatter":{"title":"Leveraging DevFiles and DevFile Registry to improve developer productivity for OpenShift developers","date":"August, 2022","tags":["OpenShift","Platform","Kubernetes","Digital","DevFile","Productivity"]},"fields":{"slug":"/devfile/"}}}]}},"pageContext":{"tag":"Productivity"}},
-    "staticQueryHashes": ["1611934721","2366241629"]}
+{"componentChunkName":"component---src-templates-tag-js","path":"/tags/productivity/","result":{"data":{"site":{"siteMetadata":{"title":"rprakashg.github.io","author":"RAM GOPINATHAN"}},"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"excerpt":"","html":"","id":"c3dc4a22-fb52-5f6b-b719-a6c23a8269c3","frontmatter":{"title":"Leveraging DevFiles and DevFile Registry to improve developer productivity for OpenShift developers","date":"August, 2022","tags":["OpenShift","Platform","Kubernetes","Digital","DevFile","Productivity"]},"fields":{"slug":"/devfile/"}}}]}},"pageContext":{"tag":"Productivity"}},"staticQueryHashes":["1611934721","2366241629"],"slicesMap":{}}
