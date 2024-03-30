@@ -42,9 +42,9 @@
 <p>I have automated the steps to enable windows container support and add windows worker nodes to the cluster using an Ansible playbook. Check out the full playbook <a href="https://github.com/rprakashg-redhat/windemos/tree/main/install">here</a></p>
 <p>There are two parts to the paybook</p>
 <ul>
-<li>Install Configure Windows Machine Config Operator (WMCO)</li>
+<li>Install and configure Windows Machine Config Operator (WMCO)</li>
 </ul>
-<p>All the steps to install and configure WMCO are automated in this script <a href="https://github.com/rprakashg-redhat/windemos/blob/main/install/tasks/enable-wmco.yaml">here</a>. Script is pretty self explanatory. One thing to call out is that when we create the namespace where windows machine config operator is install where are setting a label <code class="language-text">openshift.io/cluster-monitoring</code> to 'true' as shown in the jinja2 template snippet below. This will tell WMCO to also install and configure prometheus windows exporter on the nodes and perform all necessary configurations to ensure openshift cluster monitoring prometheus server scrapes metrics exposed by the windows exporter.</p>
+<p>All the steps to install and configure WMCO are automated in this script <a href="https://github.com/rprakashg-redhat/windemos/blob/main/install/tasks/enable-wmco.yaml">here</a>. Script is pretty self explanatory. One thing to call out is that when we create the namespace where windows machine config operator is installed, we are setting a label named <code class="language-text">openshift.io/cluster-monitoring</code> to 'true', see the jinja2 template snippet below. This will tell WMCO to also install and configure prometheus windows exporter on the nodes and perform all necessary configurations to ensure openshift cluster monitoring prometheus server scrapes metrics exposed by the windows exporter.</p>
 <div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">---
 apiVersion: v1
 kind: Namespace
