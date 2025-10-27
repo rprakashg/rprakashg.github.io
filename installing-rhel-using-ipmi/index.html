@@ -294,8 +294,8 @@ For example, in my setup:</p>
     </span></p>
 <hr>
 <h3>About the Kickstart File</h3>
-<p>To make the installation completely hands-free, your ISO needs a <strong>custom kickstart configuration</strong>. Without it, the installer will start a <strong>VNC session</strong>, and you’ll have to complete setup manually using a VNC client.</p>
-<p>I’ve automated all of that using <strong>Ansible</strong>, so the install runs start to finish without any manual steps.
+<p>To make the installation completely hands-free, your ISO needs a <strong>custom kickstart configuration</strong>. Without it, the installer will start a <strong>VNC session</strong>, and you’ll have to complete setup manually using a VNC client, this is because of the graphical installer. Who uses GUI installer right? :)</p>
+<p>I’ve automated all the steps for building ISO with custom kickstart along with cloud-init for initializating the provisioned system using <strong>Ansible</strong>, so the install runs start to finish without any manual steps.
 If you’d like to try that out, check out my GitHub repo here:<br>
 👉 <a href="http://github.com/rprakashg-rh/enlit-build">rprakashg-rh/enlit-build</a></p>
 <hr>
