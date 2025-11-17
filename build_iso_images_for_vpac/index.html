@@ -230,6 +230,8 @@
   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Build ISO
     <span class="token key atrule">ansible.builtin.import_role</span><span class="token punctuation">:</span>
       <span class="token key atrule">name</span><span class="token punctuation">:</span> rprakashg.vpac.build_iso</code></pre></div>
+<p>Run the playbook as shown in command below</p>
+<div class="gatsby-highlight" data-language="sh"><pre class="language-sh"><code class="language-sh">ansible-playbook <span class="token parameter variable">-i</span> inventory --vault-password-file <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$VAULT_SECRET</span>"</span><span class="token punctuation">)</span> build_iso.yml <span class="token parameter variable">-e</span> @vars/vpacsystem.yml</code></pre></div>
 <p>If everything goes well we should see the playbook completed successfully without errors and see an output like the screen capture below.</p>
 <p><span
       class="gatsby-resp-image-wrapper"
